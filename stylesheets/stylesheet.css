@@ -1,5 +1,5 @@
 /*******************************************************************************
-Slate Theme for GitHub Pages
+Slate Theme for Github Pages
 by Jason Costello, @jsncostello
 *******************************************************************************/
 
@@ -47,6 +47,10 @@ table {
   border-spacing: 0;
 }
 
+a:focus {
+  outline: none;
+}
+
 /*******************************************************************************
 Theme Styles
 *******************************************************************************/
@@ -55,7 +59,7 @@ body {
   box-sizing: border-box;
   color:#373737;
   background: #212121;
-  font-size: 16px;
+  font-size: 20px;
   font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -98,10 +102,12 @@ h6 {
 
 p {
   margin: 10px 0 15px 0;
+  text-align: justify
 }
 
 footer p {
-  color: #f2f2f2;
+  color: #000;
+  text-align: center
 }
 
 a {
@@ -121,11 +127,14 @@ a {
   -ms-transition: text-shadow 0.5s ease;
 }
 
-a:hover, a:focus {text-decoration: underline;}
+#main_content a:hover {
+  color: #0069ba;
+  text-shadow: #0090ff 0px 0px 2px;
+}
 
-footer a {
-  color: #F2F2F2;
-  text-decoration: underline;
+footer a:hover {
+  color: #43adff;
+  text-shadow: #0090ff 0px 0px 2px;
 }
 
 em {
@@ -140,6 +149,7 @@ img {
   position: relative;
   margin: 0 auto;
   max-width: 739px;
+/*
   padding: 5px;
   margin: 10px 0 10px 0;
   border: 1px solid #ebebeb;
@@ -149,6 +159,7 @@ img {
   -moz-box-shadow: 0 0 5px #ebebeb;
   -o-box-shadow: 0 0 5px #ebebeb;
   -ms-box-shadow: 0 0 5px #ebebeb;
+*/
 }
 
 pre, code {
@@ -250,6 +261,11 @@ form {
   padding: 20px;
 }
 
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
 /*******************************************************************************
 Full-Width Styles
 *******************************************************************************/
@@ -281,12 +297,12 @@ Full-Width Styles
 }
 
 #header_wrap {
-  background: #212121;
-  background: -moz-linear-gradient(top, #373737, #212121);
-  background: -webkit-linear-gradient(top, #373737, #212121);
-  background: -ms-linear-gradient(top, #373737, #212121);
-  background: -o-linear-gradient(top, #373737, #212121);
-  background: linear-gradient(top, #373737, #212121);
+  background: #000;
+  background: -moz-linear-gradient(top, #FFF, #FFF);
+  background: -webkit-linear-gradient(top, #FFF, #FFF);
+  background: -ms-linear-gradient(top, #FFF, #FFF);
+  background: -o-linear-gradient(top, #FFF, #FFF);
+  background: linear-gradient(top, #FFF, #FFF);
 }
 
 #header_wrap .inner {
@@ -307,6 +323,7 @@ Full-Width Styles
   font-weight: 300;
   background: none;
   text-shadow: #111 0px 0px 10px;
+  width: 550px;
 }
 
 #downloads {
@@ -359,10 +376,21 @@ Full-Width Styles
 }
 
 #footer_wrap {
-  background: #212121;
+  background: #FFF;
+  background: -moz-linear-gradient(top, #FFF,#FFF);
+  background: -webkit-linear-gradient(top, #FFF,#FFF );
+  background: -ms-linear-gradient(top, #FFF, #FFF);
+  background: -o-linear-gradient(top,  #FFF, #FFF);
+  background: linear-gradient(top,  #FFF, #FFF);
 }
 
+#keen1 {
+  color:#82D2F0
+}
 
+#keen2 {
+  color:#000
+}
 
 /*******************************************************************************
 Small Device Styles

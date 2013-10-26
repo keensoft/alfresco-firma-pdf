@@ -5,22 +5,17 @@
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="Alfresco-firma-pdf : Firma electrónica de documentos PDF en Alfresco" />
-
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
+	<link rel="shortcut icon" type='image/x-icon' href="images/firmapdf_icono.ico">
     <title>Alfresco-firma-pdf</title>
   </head>
 
   <body>
-
-    <!-- HEADER -->
+	<!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/keensoft/alfresco-firma-pdf">View on GitHub</a>
-
-          <h1 id="project_title">Alfresco-firma-pdf</h1>
-          <h2 id="project_tagline">Firma electrónica de documentos PDF en Alfresco</h2>
-
+			<a id="forkme_banner" href="https://github.com/keensoft/alfresco-firma-pdf">View on GitHub</a>
+			<h2 id="project_tagline"><img src="images/firmapdf.png" /> </h2>
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/keensoft/alfresco-firma-pdf/zipball/master">Download this project as a .zip file</a>
               <a class="tar_download_link" href="https://github.com/keensoft/alfresco-firma-pdf/tarball/master">Download this project as a tar.gz file</a>
@@ -31,45 +26,43 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+        <h3>Qué es</h3>
+		<p><a href="https://github.com/keensoft/alfresco-firma-pdf">Alfresco firma pdf</a> es un módulo para el sistema de gestión documental <a href="http://www.alfresco.com">Alfresco</a> que permite firmar electrónicamente documentos de tipo <a href="http://www.adobe.com/es/products/acrobat/adobepdf.html">PDF</a> mediante la herramienta  <a href="http://forja-ctt.administracionelectronica.gob.es/web/proyectos/clienteafirma/pid/1436">@Firma</a>.</p>
+		<p>Gracias la instalación de este módulo se puede usar <a href="http://www.alfresco.com">Alfresco</a> como un sistema de portafirmas, al permitir definir flujos que requieran la firma de documentos por los usuarios.</p>
+		<br/>
+		<h3>Descripción</h3>
+		<p>Un portafirmas es una herramienta que permite definir procesos de firma de documentos entre usuarios. Los usuarios deben poder revisar los documentos del proceso y firmarlos si lo consideran oportuno, quedando el documento firmado disponible en la plataforma.</p>
+		<p><a href="http://www.alfresco.com">Alfresco</a> dispone de las capacidades de gestión documental que permiten a una entidad que lo implante disponer de su documentación organizada y fácilmente accesible. Además facilita la creación de flujos entre usuarios sobre los documentos, pudiéndose convertir en un portafirmas con el módulo <a href="https://github.com/keensoft/alfresco-firma-pdf">Alfresco firma pdf</a>.</p>
+		<p>Este módulo añade a <a href="http://www.alfresco.com">Alfresco</a>:
+		<ul>
+			<li>Nueva acción disponible sobre los documentos: 'Firmar'.</li>
+			<li>Ventana de firma que utiliza <a href="http://forja-ctt.administracionelectronica.gob.es/web/proyectos/clienteafirma/pid/1436">@Firma</a> como herramienta de firma.</li>
+			<li>Servicios de respositorio para generar nuevas versiones con el contenido firmado.</li>
+		</ul>
+		</p>
+		<br/>
+		<h3>Contribuir</h3>
+		<p>Si quieres contribuir estas invitado a hacerlo.
+			<ul>
+				<li>Clona el repositorio <i>git</i> del proyecto.</li>
+				<li>Realiza los cambios que desees aportar.</li>
+				<li>Finalmente comparte tus cambios con la comunidad utilizando GitHub.</li>
+			</ul>
+		</p>
+		<br/>
+		<h3>Descargas</h3>
+		<p>Puedes descargar el proyecto y los demás recursos a través de los enlaces de la <a href="#top">parte superior de la página</a></p>
+		<br/>
+		<h3>Licencia de uso</h3>
+		<p>El módulo <a href="https://github.com/keensoft/alfresco-firma-pdf">Alfresco firma pdf</a> está licenciado bajo la licencia <a href="http://www.gnu.org/licenses/lgpl-3.0.html">LGPL v.3</a></p>		
       </section>
     </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">Alfresco-firma-pdf maintained by <a href="https://github.com/keensoft">keensoft</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+        <p class="copyright"><a href="http://www.keensoft.es"><img src="images/keensoft.png" style="width: 200px"></a></p>
+        <p class="copyright" style="font-size: 12px;margin-top: -30px;">Proyecto financiado por el <a href="http://www.aragon.es">Gobierno de Aragón</a> dentro del programa de apoyo al Software libre.</p>
       </footer>
     </div>
 
