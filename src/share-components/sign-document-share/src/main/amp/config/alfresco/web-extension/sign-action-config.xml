@@ -1,0 +1,29 @@
+<alfresco-config>
+	<config evaluator="string-compare" condition="DocLibActions">
+	   <actions>
+		  <action id="sign-action"
+				  icon="sign-action-icon" 
+				  type="javascript"
+				  label="actions.sign-action">
+			 <param name="function">onActionSign</param>
+			 <param name="successMessage">message.sign-action.success</param>
+			 <param name="failureMessage">message.sign-action.failure</param>			          
+		  </action>
+	   </actions>   
+	  <actionGroups>
+		  <actionGroup id="document-browse">
+			 <action index="400" id="sign-action" />
+		  </actionGroup>
+		  <actionGroup id="document-details">
+			 <action index="400" id="sign-action" />
+		  </actionGroup>
+	   </actionGroups>
+	</config>
+	
+	<config evaluator="string-compare" condition="DocLibCustom">
+          <dependencies>
+             <js src="components/documentlibrary/sign-action.js" />         
+          </dependencies>       
+    </config>
+</alfresco-config>
+	

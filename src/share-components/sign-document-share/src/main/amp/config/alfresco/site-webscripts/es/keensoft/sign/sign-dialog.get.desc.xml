@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>Sign dialog</shortname>
+	<description>Dialog to sign documents</description>
+	<family>keensoft</family>
+	<url>/keensoft/sign/sign-dialog?nodeRef={nodeRef}</url>
+	<url>/keensoft/sign/sign-dialog.html?nodeRef={nodeRef}</url>	
+	<format default="html">any</format>	
+</webscript>

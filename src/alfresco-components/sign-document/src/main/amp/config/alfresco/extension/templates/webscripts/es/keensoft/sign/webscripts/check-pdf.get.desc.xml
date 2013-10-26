@@ -1,0 +1,12 @@
+<webscript>
+	<shortname>Check PDF</shortname>
+	<description>
+		Checks if node content is PDF
+	</description>
+	<family>keensoft</family>
+	<url>/keensoft/sign/check-pdf?nodeRef={nodeRef}</url>
+	<url>/keensoft/sign/check-pdf.json?nodeRef={nodeRef}</url>
+	<format default="json">any</format>
+	<authentication>user</authentication>
+	<transaction>none</transaction>
+</webscript>

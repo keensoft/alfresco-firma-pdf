@@ -1,0 +1,12 @@
+<webscript>
+	<shortname>Get Base64 Node content</shortname>
+	<description>
+		Reads the node content and returns it in Base64
+	</description>
+	<family>keensoft</family>
+	<url>/keensoft/sign/base64-node-content</url>
+	<url>/keensoft/sign/base64-node-content.json</url>
+	<format default="json">any</format>
+	<authentication>user</authentication>
+	<transaction>none</transaction>
+</webscript>

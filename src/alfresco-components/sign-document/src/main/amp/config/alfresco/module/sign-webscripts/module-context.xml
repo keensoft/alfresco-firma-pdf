@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN'
+'http://www.springframework.org/dtd/spring-beans.dtd'>
+<beans>
+
+	<bean id="webscript.es.keensoft.sign.webscripts.check-pdf.get"
+		class="es.keensoft.alfresco.sign.webscript.CheckPdf" parent="webscript">
+		<property name="nodeService" ref="NodeService" />
+	</bean>
+
+	<bean id="webscript.es.keensoft.sign.webscripts.save-sign.post"
+		class="es.keensoft.alfresco.sign.webscript.SaveSign" parent="webscript">
+		<property name="contentService" ref="ContentService" />
+		<property name="versionService" ref="VersionService" />
+		<property name="checkOutCheckInService" ref="CheckOutCheckInService" />
+	</bean>
+
+	<bean id="webscript.es.keensoft.sign.webscripts.base64-node-content.get"
+		class="es.keensoft.alfresco.sign.webscript.Base64NodeContent" parent="webscript">
+		<property name="contentService" ref="ContentService" />
+	</bean>
+</beans>

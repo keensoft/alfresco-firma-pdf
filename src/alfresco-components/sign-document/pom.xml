@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>sign-document</artifactId>
+	<packaging>amp</packaging>
+	<name>keensoft :: Alfresco :: Firma PDF :: Components :: Sign Document</name>
+  	<description>Sign Document Webscripts</description>
+
+	<parent>
+		<artifactId>alfresco-components</artifactId>
+		<groupId>es.keensoft.alfresco</groupId>
+		<version>${version}</version>
+	</parent>
+
+	<properties>
+		<alfresco.client.war>alfresco</alfresco.client.war>
+	</properties>
+
+	<dependencies>		
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.2.4</version>
+		</dependency>				
+	</dependencies>
+
+
+</project>
