@@ -1,6 +1,6 @@
-alfresco-firma-pdf
+alfresco-firma
 ==================
-portafirmas - firmapdf Alfresco, es un plugin para Alfresco que permite usar este como portafirmas gracias a la inclusión de una nueva acción para firmar documentos pdf.
+Plugin para Alfresco que permite usar este como portafirmas gracias a la inclusión de una nueva acción para firmar documentos PDF (PAdES-BES) y para firmar el resto de documentos (CAdES-BES detached).
 
 Presentación
 ------------
