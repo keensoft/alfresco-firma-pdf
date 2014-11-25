@@ -1,6 +1,7 @@
 package es.keensoft.alfresco.sign.webscript.bean;
 
 public class Base64NodeContentResponse extends BasicResponse {
+	
 	private String base64NodeContent;
 
 	public String getBase64NodeContent() {

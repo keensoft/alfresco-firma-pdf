@@ -3,6 +3,7 @@ package es.keensoft.alfresco.sign.webscript;
 import java.io.IOException;
 
 import org.alfresco.model.ContentModel;
+import org.alfresco.repo.content.MimetypeMap;
 import org.alfresco.service.cmr.repository.ContentIOException;
 import org.alfresco.service.cmr.repository.ContentReader;
 import org.alfresco.service.cmr.repository.ContentService;
@@ -22,6 +23,7 @@ import com.google.gson.Gson;
 import es.keensoft.alfresco.sign.webscript.bean.Base64NodeContentResponse;
 
 public class Base64NodeContent extends AbstractWebScript {
+	
 	private static Log log = LogFactory.getLog(Base64NodeContent.class);
 
 	public static final String RESPONSE_CODE_OK = "OK";
@@ -30,26 +32,30 @@ public class Base64NodeContent extends AbstractWebScript {
 
 	@Override
 	public void execute(WebScriptRequest req, WebScriptResponse res) throws IOException {
+		
 		Gson gson = new Gson();
 		Base64NodeContentResponse response = new Base64NodeContentResponse();
 
 		try {
+			
 			String docNodeRefStr = req.getParameter("nodeRef");
 			NodeRef nodeRef = new NodeRef(docNodeRefStr);			
 
 			byte[] nodeContent = getNodeContent(nodeRef);
-			log.debug("Node content recovered.(" + nodeContent.length + " bytes)");
 			response.setBase64NodeContent(Base64.encodeBase64String(nodeContent));
-			log.debug("Node content base64 encoded.");
-			
-			response.setCode(RESPONSE_CODE_OK);			
 			response.setNodeRef(nodeRef.getId());
+			response.setCode(RESPONSE_CODE_OK);			
+			
 		} catch (Exception e) {
+			
 			log.error(ExceptionUtils.getFullStackTrace(e));
 			throw new WebScriptException(e.getMessage(), e);
+			
 		}
 
+		res.setContentType(MimetypeMap.MIMETYPE_JSON);
 		res.getWriter().write(gson.toJson(response));
+		
 	}
 
 	private byte[] getNodeContent(NodeRef nodeRef) throws ContentIOException, IOException {

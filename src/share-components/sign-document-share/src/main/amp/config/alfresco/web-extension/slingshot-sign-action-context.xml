@@ -6,10 +6,31 @@
            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 
-	<!-- When deployed as Alfresco Share JAR, "share-config-custom.xml" local 
-		file overrides {alfresco.home}/tomcat/shared/classes/alfresco/web-extension/share-config-custom.xml 
-		So it's necessary to rename local file and load it onto ConfigBootstrap section -->
-	<bean id="signDocumentAction.config" class="org.springframework.extensions.config.ConfigBootstrap"
+   <bean id="evaluator.doclib.action.pdfMimetype" parent="evaluator.doclib.action.isMimetype">
+      <property name="mimetypes">
+         <list>
+            <value>application/pdf</value>
+         </list>
+      </property>
+   </bean>
+   
+   <bean id="evaluator.doclib.action.signed" parent="evaluator.doclib.action.hasAspect">
+      <property name="aspects">
+         <list>
+            <value>sign:signed</value>
+         </list>
+      </property>
+   </bean>
+
+   <bean id="evaluator.doclib.action.signature" parent="evaluator.doclib.action.hasAspect">
+      <property name="aspects">
+         <list>
+            <value>sign:signature</value>
+         </list>
+      </property>
+   </bean>
+
+   	<bean id="signDocumentAction.config" class="org.springframework.extensions.config.ConfigBootstrap"
 		init-method="register">
 		<property name="configService" ref="web.config" />
 		<property name="configs">
@@ -24,20 +45,17 @@
 		<property name="resourceBundles">
 			<list>
 				<value>alfresco.messages.sign-action</value>
+				<value>alfresco.messages.sign-model</value>
 			</list>
 		</property>
 	</bean>
 
-	<!-- Redefines timeout for Share webscript connections -->
 	<bean id="connector.remoteclient" parent="connector.remoteclient.abstract"
 		class="org.springframework.extensions.webscripts.connector.RemoteClient"
 		scope="prototype">
-		<!-- the http.connection.timeout value in milliseconds to apply to HTTP 
-			connections -->
 		<property name="connectTimeout">
 			<value>30000</value>
 		</property>
-		<!-- the http.socket.timeout value in milliseconds to apply to HTTP connections -->
 		<property name="readTimeout">
 			<value>600000</value>
 		</property>

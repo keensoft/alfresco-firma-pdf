@@ -3,9 +3,12 @@
 'http://www.springframework.org/dtd/spring-beans.dtd'>
 <beans>
 
-	<bean id="webscript.es.keensoft.sign.webscripts.check-pdf.get"
-		class="es.keensoft.alfresco.sign.webscript.CheckPdf" parent="webscript">
-		<property name="nodeService" ref="NodeService" />
+	<bean id="extension.sign.model.dictionaryBootstrap" parent="dictionaryModelBootstrap" depends-on="dictionaryBootstrap">
+		<property name="models">
+			<list>
+				<value>alfresco/extension/model/sign-model.xml</value>
+			</list>
+		</property>
 	</bean>
 
 	<bean id="webscript.es.keensoft.sign.webscripts.save-sign.post"
@@ -13,10 +16,21 @@
 		<property name="contentService" ref="ContentService" />
 		<property name="versionService" ref="VersionService" />
 		<property name="checkOutCheckInService" ref="CheckOutCheckInService" />
+		<property name="nodeService" ref="NodeService" />
 	</bean>
 
 	<bean id="webscript.es.keensoft.sign.webscripts.base64-node-content.get"
 		class="es.keensoft.alfresco.sign.webscript.Base64NodeContent" parent="webscript">
 		<property name="contentService" ref="ContentService" />
 	</bean>
+	
+	<bean id="signCustomBehavior"
+		class="es.keensoft.alfresco.behaviour.CustomBehaviour"
+		init-method="init">
+		  <property name="policyComponent" ref="policyComponent" />
+		  <property name="nodeService" ref="NodeService" />
+		  <property name="versionService" ref="VersionService" />
+	</bean>
+	
+	
 </beans>

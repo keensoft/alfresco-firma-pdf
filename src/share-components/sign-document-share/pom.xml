@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>sign-document-share</artifactId>
 	<packaging>amp</packaging>
-	<name>keensoft :: Alfresco :: Firma PDF :: Share Components :: Sign Document</name>
+	<name>keensoft :: Alfresco :: Firma :: Share Components :: Sign Document</name>
   	<description>Share Sign Document Webscripts</description>
 
 	<parent>

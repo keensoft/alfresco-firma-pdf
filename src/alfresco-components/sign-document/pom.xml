@@ -5,8 +5,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>sign-document</artifactId>
 	<packaging>amp</packaging>
-	<name>keensoft :: Alfresco :: Firma PDF :: Components :: Sign Document</name>
-  	<description>Sign Document Webscripts</description>
+	<name>keensoft :: Alfresco :: Firma :: Components :: Sign Document</name>
+	<description>Sign Document Webscripts</description>
 
 	<parent>
 		<artifactId>alfresco-components</artifactId>
@@ -18,12 +18,14 @@
 		<alfresco.client.war>alfresco</alfresco.client.war>
 	</properties>
 
-	<dependencies>		
+	<dependencies>
+	
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
 			<version>2.2.4</version>
-		</dependency>				
+		</dependency>
+		
 	</dependencies>
 
 

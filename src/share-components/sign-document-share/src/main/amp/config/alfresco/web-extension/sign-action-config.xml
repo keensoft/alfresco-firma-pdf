@@ -1,29 +1,49 @@
 <alfresco-config>
 	<config evaluator="string-compare" condition="DocLibActions">
-	   <actions>
-		  <action id="sign-action"
-				  icon="sign-action-icon" 
-				  type="javascript"
-				  label="actions.sign-action">
-			 <param name="function">onActionSign</param>
-			 <param name="successMessage">message.sign-action.success</param>
-			 <param name="failureMessage">message.sign-action.failure</param>			          
-		  </action>
-	   </actions>   
-	  <actionGroups>
-		  <actionGroup id="document-browse">
-			 <action index="400" id="sign-action" />
-		  </actionGroup>
-		  <actionGroup id="document-details">
-			 <action index="400" id="sign-action" />
-		  </actionGroup>
-	   </actionGroups>
+		<actions>
+			<action id="sign-action-pdf" icon="sign-action-icon" type="javascript"
+				label="actions.sign-action">
+				<permissions>
+					<permission allow="true">Write</permission>
+				</permissions>
+				<param name="function">onActionSign</param>
+				<param name="successMessage">message.sign-action.success</param>
+				<param name="failureMessage">message.sign-action.failure</param>
+				<param name="mimeType">pdf</param>
+				<evaluator>evaluator.doclib.action.pdfMimetype</evaluator>
+				<evaluator negate="true">evaluator.doclib.action.signed</evaluator>
+				<evaluator negate="true">evaluator.doclib.action.signature</evaluator>
+			</action>
+			<action id="sign-action-other" icon="sign-action-icon" type="javascript"
+				label="actions.sign-action">
+				<permissions>
+					<permission allow="true">Write</permission>
+				</permissions>
+				<param name="function">onActionSign</param>
+				<param name="successMessage">message.sign-action.success</param>
+				<param name="failureMessage">message.sign-action.failure</param>
+				<param name="mimeType">other</param>
+				<evaluator negate="true">evaluator.doclib.action.pdfMimetype</evaluator>
+				<evaluator negate="true">evaluator.doclib.action.signed</evaluator>
+				<evaluator negate="true">evaluator.doclib.action.signature</evaluator>
+			</action>
+		</actions>
+		<actionGroups>
+			<actionGroup id="document-browse">
+				<action index="400" id="sign-action-pdf" />
+				<action index="401" id="sign-action-other" />
+			</actionGroup>
+			<actionGroup id="document-details">
+				<action index="400" id="sign-action-pdf" />
+				<action index="400" id="sign-action-other" />
+			</actionGroup>
+		</actionGroups>
 	</config>
-	
+
 	<config evaluator="string-compare" condition="DocLibCustom">
-          <dependencies>
-             <js src="components/documentlibrary/sign-action.js" />         
-          </dependencies>       
-    </config>
+		<dependencies>
+			<js src="components/documentlibrary/sign-action.js" />
+		</dependencies>
+	</config>
 </alfresco-config>
 	

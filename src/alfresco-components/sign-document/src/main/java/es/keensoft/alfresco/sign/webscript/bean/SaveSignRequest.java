@@ -1,11 +1,13 @@
 package es.keensoft.alfresco.sign.webscript.bean;
 
 public class SaveSignRequest {
+	
 	private String nodeRef;
 	private String signerRole;
 	private String dataToSign;
 	private String signedData;
 	private String signerData;
+	private String mimeType;
 
 	public String getNodeRef() {
 		return nodeRef;
@@ -45,6 +47,14 @@ public class SaveSignRequest {
 
 	public void setSignerData(String signerData) {
 		this.signerData = signerData;
+	}
+
+	public String getMimeType() {
+		return mimeType;
+	}
+
+	public void setMimeType(String mimeType) {
+		this.mimeType = mimeType;
 	}
 
 }

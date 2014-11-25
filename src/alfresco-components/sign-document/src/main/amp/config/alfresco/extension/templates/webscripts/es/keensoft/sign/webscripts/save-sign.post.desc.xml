@@ -8,5 +8,5 @@
 	<url>/keensoft/sign/save-sign.json</url>
 	<format default="json">any</format>
 	<authentication>user</authentication>
-	<transaction>none</transaction>
+	<transaction>required</transaction>
 </webscript>

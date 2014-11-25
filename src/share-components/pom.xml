@@ -3,13 +3,13 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>es.keensoft.alfresco</groupId>
-    <artifactId>firma-pdf</artifactId>
+    <artifactId>firma</artifactId>
     <version>${version}</version>
   </parent>
   <artifactId>share-components</artifactId>
   <packaging>pom</packaging>
-  <name>keensoft :: Alfresco :: Firma PDF :: Share Components</name>
-  <description>Share Components for 'firma-pdf' module</description>
+  <name>keensoft :: Alfresco :: Firma :: Share Components</name>
+  <description>Share Components for 'firma' module</description>
   <modules>
     <module>sign-document-share</module>
   </modules>

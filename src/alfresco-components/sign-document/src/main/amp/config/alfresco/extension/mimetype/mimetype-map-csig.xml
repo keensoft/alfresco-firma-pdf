@@ -1,0 +1,13 @@
+<alfresco-config area="mimetype-map">
+   
+   <config evaluator="string-compare" condition="Mimetype Map">
+      <mimetypes>
+
+         <mimetype mimetype="application/cms" display="CSIG - ASN.1 Signature">
+            <extension>csig</extension>
+         </mimetype>
+
+      </mimetypes>
+   </config>
+   
+</alfresco-config>

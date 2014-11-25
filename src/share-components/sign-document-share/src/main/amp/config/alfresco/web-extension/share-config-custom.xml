@@ -1,0 +1,53 @@
+<alfresco-config>
+
+	<config evaluator="aspect" condition="sign:signed">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="sign:type" />
+					<show id="sign:signatureAssoc" />
+				</field-visibility>
+				<appearance>
+					<set id="signed" appearance="bordered-panel" label-id="panel.signed" />
+					<field id="sign:type" set="signed" label-id="prop.type" read-only="true"/>
+					<field id="sign:signatureAssoc" set="signed" label-id="prop.signature.assoc" read-only="true">
+			        	<control template="/org/alfresco/components/form/controls/association.ftl">
+							<control-param name="displayMode">items</control-param>
+							<control-param name="showTargetLink">true</control-param>
+							<control-param name="compactMode">true</control-param>
+						</control>                    
+					</field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+	
+	<config evaluator="aspect" condition="sign:signature">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="sign:format" />
+					<show id="sign:date" />
+					<show id="sign:docAssoc" />
+				</field-visibility>
+				<appearance>
+					<set id="signature" appearance="bordered-panel" label-id="panel.signature" />
+					<field id="sign:format" set="signature" label-id="prop.format" />
+					<field id="sign:date" set="signature" label-id="prop.date">
+						<control template="/org/alfresco/components/form/controls/date.ftl">
+							<control-param name="showTime">true</control-param>
+						</control>
+					</field>
+					<field id="sign:docAssoc" set="signature" label-id="prop.original.document" read-only="true">
+			        	<control template="/org/alfresco/components/form/controls/association.ftl">
+							<control-param name="displayMode">items</control-param>
+							<control-param name="showTargetLink">true</control-param>
+							<control-param name="compactMode">true</control-param>
+						</control>                    
+					</field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+	
+</alfresco-config>

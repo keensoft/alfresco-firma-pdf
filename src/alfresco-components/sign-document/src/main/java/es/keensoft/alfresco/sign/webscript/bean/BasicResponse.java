@@ -1,6 +1,7 @@
 package es.keensoft.alfresco.sign.webscript.bean;
 
 public class BasicResponse {
+	
 	private String code;
 	private String errorDescription;
 	private String nodeRef;
