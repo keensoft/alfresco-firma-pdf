@@ -22,7 +22,7 @@
 							text : this.msg("message.sign-action.success"),
 							displayTime : 3
 						});
-						setTimeout(function(){window.location.href=Alfresco.constants.URL_PAGECONTEXT + "site/" +  Alfresco.constants.SITE + "/document-details?nodeRef=" + record.nodeRef},2000);
+                        YAHOO.Bubbling.fire("metadataRefresh");
 					},
 					scope : this
 				},
@@ -32,7 +32,6 @@
 							text : this.msg("message.sign-action.failure"),
 							displayTime : 3
 						});						
-						setTimeout(function(){window.location.href=Alfresco.constants.URL_PAGECONTEXT + "site/" +  Alfresco.constants.SITE + "/document-details?nodeRef=" + record.nodeRef},2000);
 					},
 					scope : this
 				},
