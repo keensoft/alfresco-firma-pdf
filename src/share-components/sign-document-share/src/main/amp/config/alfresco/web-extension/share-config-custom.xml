@@ -50,4 +50,14 @@
 		</forms>
 	</config>
 	
+	<config evaluator="string-compare" condition="DocumentLibrary">
+		<indicators>
+			<indicator id="indicator.signed" index="1"
+					icon="sign-action-icon-16.png"
+					label="indicator.signed" >
+				<evaluator>evaluator.doclib.action.signed</evaluator>
+			</indicator>
+		</indicators>
+	</config>
+	
 </alfresco-config>
