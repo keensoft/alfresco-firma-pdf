@@ -28,6 +28,7 @@
 				},
 				onFailure : {
 					fn : function signDialog_failCallback(response) {
+						this.widgets.signDialog.hide();
 						Alfresco.util.PopupManager.displayMessage({
 							text : this.msg("message.sign-action.failure"),
 							displayTime : 3

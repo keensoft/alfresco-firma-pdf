@@ -9,7 +9,7 @@
 	<description>Firma para Alfresco</description>
 
 	<properties>
-		<version>0.8.0</version>
+		<version>0.9.0</version>
 		<skipTests>false</skipTests>
 		<env>loc</env>
 		<dist>${project.parent.parent.basedir}/dist</dist>
