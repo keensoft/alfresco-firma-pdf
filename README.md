@@ -30,6 +30,22 @@ You can download plain applet from http://forja-ctt.administracionelectronica.go
 
 Oracle [jarsigner](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/jarsigner.html) can be used to perform a signature on [miniapplet-full_1_3.jar](https://github.com/keensoft/alfresco-firma-pdf/blob/master/src/share-components/sign-document-share/src/main/amp/root/sign/miniapplet-full_1_3.jar). To deploy this change, just replace current JAR for your signed JAR and rebuild the artifacts.
 
+Running under SSL
+-----------------
+Signature window is built on an IFRAME, so when running Alfresco under SSL, following JavaScript console error may appear:
+
+```Refused to display 'https://alfresco.keensoft.es/share/sign/sign-frame.jsp?mimeType=pdf' in a frame because it set 'X-Frame-Options' to 'DENY'.```
+
+If so, check your web server configuration in order to set appropiate **X-Frame-Options** header value.
+
+For instance, Apache HTTP default configuration for SSL includes...
+
+```Header always set X-Frame-Options DENY```
+
+... and it should be set to **SAMEORIGIN** instead
+
+```Header always set X-Frame-Options SAMEORIGIN```
+
 alfresco-firma (Spanish version)
 ================================
 Plugin para Alfresco que permite usar este como portafirmas gracias a la inclusión de una nueva acción para firmar documentos PDF (PAdES-BES) y para firmar el resto de documentos (CAdES-BES detached).
