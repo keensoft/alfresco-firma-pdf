@@ -16,5 +16,6 @@
 
 	<properties>
 		<alfresco.client.war>share</alfresco.client.war>
-	</properties>	
+	</properties>
+	
 </project>
