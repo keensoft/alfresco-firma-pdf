@@ -4,7 +4,7 @@
   <parent>
     <groupId>es.keensoft.alfresco</groupId>
     <artifactId>firma</artifactId>
-    <version>0.9.0</version>
+    <version>${version}</version>
   </parent>
   <artifactId>share-components</artifactId>
   <packaging>pom</packaging>
