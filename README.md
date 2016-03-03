@@ -2,8 +2,11 @@ alfresco-firma
 ==================
 
 > ** IMPORTANT NOTICE **
+
 > New electronic signature addon by using client electronic certificates is available at [alfresco-esign-cert](https://github.com/keensoft/alfresco-esign-cert)
+
 > **alfresco-firma-pdf** only supports applet, but **alfresco-esign-cert** supports also local application
+
 > **alfresco-esign-cert** allows additionally client signature by using Google Chrome, iOS and Android
 
 Provides an Alfresco Share action for signing PDF files (PAdES-BES format) and any other file (CAdES-BES format detached) via java applet (@firma miniApplet, opensource at https://github.com/ctt-gob-es/clienteafirma).
